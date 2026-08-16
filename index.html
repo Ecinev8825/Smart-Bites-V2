@@ -1,0 +1,349 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <title>Smart Bites</title>
+
+        <style>
+            * {
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+            }
+
+            body {
+                font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+                background-color: #f3f1e8;
+                color: #26352b;
+            }
+
+            /* ================= HEADER ================= */
+
+            header {
+                background-color: #315c43;
+                color: white;
+                padding: 25px 8%;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            }
+
+            .logo {
+                font-size: 28px;
+                font-weight: bold;
+            }
+
+            nav a {
+                color: white;
+                text-decoration: none;
+                margin-left: 30px;
+                font-weight: 600;
+            }
+
+            nav a:hover {
+                color: #f4c95d;
+            }
+
+            /* ================= HERO ================= */
+
+            .hero {
+                max-width: 1200px;
+                margin: 50px auto;
+                padding: 70px 60px;
+
+                background-color: #dcebdc;
+                border-radius: 25px;
+
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                gap: 50px;
+            }
+
+            .hero-text {
+                max-width: 600px;
+            }
+
+            .hero h1 {
+                font-size: 55px;
+                margin-bottom: 20px;
+                color: #315c43;
+            }
+
+            .hero p {
+                font-size: 20px;
+                line-height: 1.6;
+                margin-bottom: 30px;
+            }
+
+            .hero-button {
+                display: inline-block;
+                padding: 14px 24px;
+
+                background-color: #315c43;
+                color: white;
+
+                text-decoration: none;
+                border-radius: 10px;
+
+                font-weight: bold;
+            }
+
+            .hero-button:hover {
+                background-color: #244732;
+            }
+
+            .hero-image {
+                width: 300px;
+                height: 300px;
+
+                background-color: #b7d4b8;
+                border-radius: 50%;
+
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                font-size: 100px;
+            }
+
+            /* ================= SECTION ================= */
+
+            .section {
+                max-width: 1200px;
+                margin: 70px auto;
+                padding: 0 30px;
+            }
+
+            .section-title {
+                text-align: center;
+                font-size: 35px;
+                margin-bottom: 40px;
+                color: #315c43;
+            }
+
+            /* ================= CARDS ================= */
+
+            .cards {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 25px;
+            }
+
+            .card {
+                background-color: white;
+                border-radius: 18px;
+                overflow: hidden;
+
+                box-shadow: 0 5px 18px rgba(0, 0, 0, 0.08);
+
+                transition: transform 0.2s;
+            }
+
+            .card:hover {
+                transform: translateY(-6px);
+            }
+
+            .card-image {
+                height: 180px;
+
+                background-color: #c9dfc9;
+
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                font-size: 70px;
+            }
+
+            .card-content {
+                padding: 25px;
+            }
+
+            .card h3 {
+                color: #315c43;
+                margin-bottom: 10px;
+                font-size: 22px;
+            }
+
+            .card p {
+                line-height: 1.6;
+                color: #59655c;
+            }
+
+            .card-button {
+                display: inline-block;
+                margin-top: 18px;
+
+                color: #315c43;
+                text-decoration: none;
+
+                font-weight: bold;
+            }
+
+            /* ================= ABOUT ================= */
+
+            .about {
+                background-color: #315c43;
+                color: white;
+
+                border-radius: 25px;
+                padding: 50px;
+
+                text-align: center;
+            }
+
+            .about h2 {
+                font-size: 32px;
+                margin-bottom: 20px;
+            }
+
+            .about p {
+                max-width: 750px;
+                margin: auto;
+                line-height: 1.7;
+                font-size: 17px;
+            }
+
+            /* ================= FOOTER ================= */
+
+            footer {
+                margin-top: 80px;
+                padding: 30px;
+
+                background-color: #24352a;
+                color: white;
+
+                text-align: center;
+            }
+
+            /* ================= MOBILE ================= */
+
+            @media (max-width: 800px) {
+                header {
+                    flex-direction: column;
+                    gap: 15px;
+                }
+
+                nav a {
+                    margin: 0 8px;
+                }
+
+                .hero {
+                    flex-direction: column;
+                    text-align: center;
+                    padding: 50px 25px;
+                }
+
+                .hero h1 {
+                    font-size: 42px;
+                }
+
+                .cards {
+                    grid-template-columns: 1fr;
+                }
+            }
+        </style>
+    </head>
+
+    <body>
+        <!-- HEADER -->
+
+        <header>
+            <div class="logo">✨Smart Bites✨</div>
+
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="#topics">Explore</a>
+                <a href="about.html">About</a>
+            </nav>
+        </header>
+
+        <!-- HERO -->
+
+        <section class="hero">
+            <div class="hero-text">
+                <h1>
+                    Eat better.<br />
+                    Feel better.
+                </h1>
+
+                <p>
+                    Smart Bites provides simple information about healthy foods, eating habits, and making better
+                    choices for your health.
+                </p>
+
+                <a href="#topics" class="hero-button"> Explore Smart Bites → </a>
+            </div>
+
+            <div class="hero-image">🥗</div>
+        </section>
+
+        <!-- TOPICS -->
+
+        <section class="section" id="topics">
+            <h2 class="section-title">Explore Smart Bites</h2>
+
+            <div class="cards">
+                <div class="card">
+                    <div class="card-image">🥦</div>
+
+                    <div class="card-content">
+                        <h3>Healthy Foods and Foods to Avoid</h3>
+
+                        <p>
+                            Learn about nutritious foods like fruits and vegetables and how they can benefit your body.
+                        </p>
+
+                        <a href="healthy_foods_and_fta.html" class="card-button"> Learn more → </a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-image">🍏</div>
+
+                    <div class="card-content">
+                        <h3>Healthy Tips</h3>
+
+                        <p>Discover simple tips that can help you take better care of yourself and others.</p>
+
+                        <a href="healty_tips.html" class="card-button"> Learn more → </a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-image">🍱</div>
+
+                    <div class="card-content">
+                        <h3>Meal Ideas</h3>
+
+                        <p>Find simple and delicious meal ideas and learn about balanced food choices.</p>
+
+                        <a href="meal_ideas.html" class="card-button"> Learn more → </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ABOUT -->
+
+        <section class="section">
+            <div class="about">
+                <h2>Why Smart Bites?</h2>
+
+                <p>
+                    Smart Bites was created to provide accessible information about healthy eating and help people
+                    understand how everyday food choices can affect their health in a way they can comprehend easier.
+                </p>
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+
+        <footer>
+            <p>© 2026 Smart Bites</p>
+        </footer>
+    </body>
+</html>
